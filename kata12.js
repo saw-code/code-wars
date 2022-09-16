@@ -14,7 +14,7 @@
 // all is trivially considered to be in ALL CAPS.
 
 String.prototype.isUpperCase = function(str) {
-  if (this == this.toUpperCase() ) {
+  if (this == this.toUpperCase()) {
     return true
   } else {
     return false
