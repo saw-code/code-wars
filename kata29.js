@@ -6,3 +6,9 @@ function booleanToString(b){
       return'false'
   }
 }
+
+// best practice
+//
+// function booleanToString(b){
+//   return b.toString();
+// }
