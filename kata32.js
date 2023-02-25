@@ -17,4 +17,9 @@ function capitalize(s,arr){
   return newString.join("")
 }
 
-console.log(capitalize("abcdef",[1,2,5]))
+
+// best practice:
+//
+//   function capitalize(s,arr){
+//     return [...s].map((x,i)=>arr.includes(i)?x.toUpperCase():x).join('')
+//   };
