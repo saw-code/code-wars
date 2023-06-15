@@ -1,34 +1,17 @@
-// You are given two arrays arr1 and arr2, where arr2 always contains integers.
+// Write a function that takes an array of strings as an argument and returns a sorted array containing the same strings, ordered from shortest to longest.
 //
-//   Write the function find_array(arr1, arr2) such that:
+// For example, if this array were passed as an argument:
 //
-//   For arr1 = ['a', 'a', 'a', 'a', 'a'], arr2 = [2, 4] find_array returns ['a', 'a']
+// ["Telescopes", "Glasses", "Eyes", "Monocles"]
 //
-// For arr1 = [0, 1, 5, 2, 1, 8, 9, 1, 5], arr2 = [1, 4, 7] find_array returns [1, 1, 1]
+// Your function would return the following array:
 //
-// For arr1 = [0, 3, 4], arr2 = [2, 6] find_array returns [4]
+// ["Eyes", "Glasses", "Monocles", "Telescopes"]
 //
-// For arr1=["a","b","c","d"] , arr2=[2,2,2], find_array returns ["c","c","c"]
-//
-// For arr1=["a","b","c","d"], arr2=[3,0,2] find_array returns ["d","a","c"]
-//
-// If either arr1 or arr2 is empty, you should return an empty arr (empty list in python, empty vector in c++). Note for c++ use std::vector arr1, arr2.
+// All of the strings in the array passed to your function will be different lengths, so you will not have to decide how to order multiple strings of the same length.
 
-function findArray(arr1, arr2){
-  if ((arr1.length && arr2.length) === 0) {
-    return []
-  }
+function sortByLength (array) {
+  return array.sort((a,b) => a.length - b.length)
+};
 
-  let newArray = []
-
-  arr2.forEach(ind => {
-    newArray.push(arr1[ind])
-  })
-
-  return newArray
-}
-
-// Лучшее решение
-// function findArray(arr1, arr2){
-//   return arr2.filter( i  => i< arr1.length ).map( i => arr1[i] )
-// }
+sortByLength(["", "Moderately", "Brains", "Pizza"])
